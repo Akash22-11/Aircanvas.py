@@ -67,7 +67,6 @@ while True:
         ((390, 10), (490, 100), (50, 50, 50)),  
     ]
     for i, ((x1r, y1r), (x2r, y2r), color) in enumerate(color_ranges):
-        # Highlight eraser box if eraser mode is on, else highlight by draw_color match
         if i == 3 and is_eraser:
             cv2.rectangle(img, (x1r - 3, y1r - 3), (x2r + 3, y2r + 3), (255, 255, 255), 3)
         elif i != 3 and not is_eraser and draw_color == color:
